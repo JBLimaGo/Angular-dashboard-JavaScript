@@ -34,7 +34,6 @@
         "@schematics/angularervice": {
           "skipTests": true
         }
-
       },
       "root": "",
       "sourceRoot": "src",
@@ -44,28 +43,30 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "allowedCommonJsDependencies": [
-              "dragula","can-use-dom","moment","leaflet","filepond","dropzone","apexcharts","sweetalert"
+              "dragula",
+              "can-use-dom",
+              "moment",
+              "leaflet",
+              "filepond",
+              "dropzone",
+              "apexcharts",
+              "sweetalert"
             ],
             "outputPath": "dist/preview",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/.htaccess"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/.htaccess"],
             "styles": [
               "src/styles.scss",
               "./node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [
               "node_modules/preline/dist/preline.js",
-              "node_modules/apexcharts/dist/apexcharts.min.js"]
+              "node_modules/apexcharts/dist/apexcharts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -112,26 +113,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/.htaccess"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/.htaccess"],
             "styles": [
               "src/styles.scss",
               "./node_modules/font-awesome/css/font-awesome.css",
               "./node_modules/filepond/dist/filepond.min.css"
-
             ],
-            "scripts": [
-              "node_modules/preline/dist/preline.js"
-            ]
+            "scripts": ["node_modules/preline/dist/preline.js"]
           }
         }
       }
